@@ -14,12 +14,17 @@ public class LightManager : MonoBehaviour
         [Header("References")]
         [SerializeField] private Light directionalLight;
         [SerializeField] private LightingPreset preset;
+        [SerializeField] private WeatherManager weather;    
         
         [Header("Settings")]
-        [SerializeField, Range(0,24)] private float timeOfDay;
+        [Range(0,24)] public float timeOfDay;
         [SerializeField] private float timeOfDaySpeed = 1f;
-        
-        
+
+        private void Awake()
+        {
+        weather = GetComponent<WeatherManager>();
+        }
+
         private void Update()
         {
                 if(preset == null)return;
@@ -29,11 +34,13 @@ public class LightManager : MonoBehaviour
                         timeOfDay %= 24; // Clamp between 0-24
                         float result = timeOfDay / 24f;
                         UpdateLighting(result);
+                        weather.UpdateTemperatuare(result);
                         timeOfDayVariable.value = result;
                 }
                 else
                 {
                         UpdateLighting(timeOfDay / 24f);
+                        weather.UpdateTemperatuare(timeOfDay/24f);
                 }
         }
 
