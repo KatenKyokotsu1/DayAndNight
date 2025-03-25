@@ -22,6 +22,7 @@ public class WeatherManager : MonoBehaviour
     private void Update()
     {
         weatherText.text = temperatureVariable.ToString();
+        weatherText.color = temperatureVariable<0 ? Color.blue : Color.red;
     }
 
     public void UpdateTemperatuare(float timePercent)
