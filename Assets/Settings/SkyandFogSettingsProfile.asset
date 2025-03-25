@@ -105,7 +105,7 @@ MonoBehaviour:
     m_Value: {fileID: 8900000, guid: f500aeac7eeca9548b50dd3bcf8a2577, type: 3}
   spaceEmissionMultiplier:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 20
   spaceRotation:
     m_OverrideState: 1
     m_Value: {x: 45, y: -7.26, z: 0}

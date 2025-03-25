@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.21768132, g: 0.21991685, b: 0.3043647, a: 1}
+  m_IndirectSpecularColor: {r: 0.16318204, g: 0.16667081, b: 0.20826319, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -211,7 +211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157207112}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07713181, y: -0.46384266, z: 0.88162005, w: 0.040581003}
+  m_LocalRotation: {x: 0.011376112, y: -0.98767215, z: 0.13002947, w: 0.08641018}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -349,7 +349,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 192692138}
-  - component: {fileID: 192692137}
   - component: {fileID: 192692136}
   - component: {fileID: 192692135}
   - component: {fileID: 192692134}
@@ -373,10 +372,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae477f16ab82574ca94408329b51ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
+  walkSpeed: 8
   currentSpeed: 0
-  runSpeed: 8
-  jumpForce: 5
+  runSpeed: 12
+  jumpForce: 7
   gravityY: -3
   camPos: {fileID: 1823688467}
   mouseSens: 1
@@ -454,14 +453,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &192692137
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192692133}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &192692138
 Transform:
   m_ObjectHideFlags: 0
@@ -471,8 +462,8 @@ Transform:
   m_GameObject: {fileID: 192692133}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9577854, z: -0, w: 0.28748414}
-  m_LocalPosition: {x: 363.86224, y: 222, z: 340.45874}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 363.86224, y: 211.37, z: 340.45874}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1823688467}
@@ -1513,8 +1504,9 @@ MonoBehaviour:
   directionalLight: {fileID: 157207113}
   preset: {fileID: 11400000, guid: 016ec6434bea80e4e9c9f173480a959e, type: 2}
   weather: {fileID: 2084116556}
-  timeOfDay: 14.3
+  timeOfDay: 7
   timeOfDaySpeed: 0.5
+  clockText: {fileID: 1713819364}
 --- !u!4 &2084116555
 Transform:
   m_ObjectHideFlags: 0
@@ -1542,7 +1534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e0a3fc260eeb240b25ee0d1c3154ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temperatureVariable: 9
+  temperatureVariable: 2
   minTemperature: -15
   maxTemperature: 15
   weatherText: {fileID: 1809547259}
