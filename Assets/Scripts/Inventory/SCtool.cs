@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Food›tem", menuName = "Scriptable/Food")]
+[CreateAssetMenu(fileName = "Tool›tem", menuName = "Scriptable/Tool")]
 
 public class SCtool : SCitem
 {

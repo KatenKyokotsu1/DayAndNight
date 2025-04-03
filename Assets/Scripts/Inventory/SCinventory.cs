@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Food›tem", menuName = "Scriptable/Food")]
+[CreateAssetMenu(fileName = "Inventory", menuName = "Scriptable/Inventory")]
 
-public class SCinventory : MonoBehaviour
+public class SCinventory : ScriptableObject
 {
     public List<Slot> inventory = new List<Slot>();
     int stackLimit = 4;

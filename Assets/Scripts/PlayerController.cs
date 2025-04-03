@@ -34,7 +34,9 @@ public class PlayerController : MonoBehaviour
     public Transform front, back;
     public bool frontHead, backHead;
 
-
+    [Header("TakeGun")]
+    public GameObject Gun;
+    public SCinventory inventory;
 
     void Start()
     {
@@ -42,6 +44,7 @@ public class PlayerController : MonoBehaviour
         normalHeight = characterController.height;
         currentSpeed = walkSpeed;
         Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
     void FixedUpdate()
@@ -164,5 +167,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    #endregion
+
+    #region TakeGun
+    void TakeGun()
+    {
+        float Dis = Vector3.Distance(this.gameObject.transform.position, Gun.transform.position);
+        if(Dis<=1 && Input.GetKey(KeyCode.E))
+        {
+            if (inventory.AddItem(Gun.GetComponent<Item>().item))
+            {
+                Destroy(Gun);
+            }
+        }
+    }
     #endregion
 }
