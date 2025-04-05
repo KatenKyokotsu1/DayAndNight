@@ -23,8 +23,9 @@ public class SCinventory : ScriptableObject
                         if (slot.itemCount >= stackLimit)
                         {
                             slot.isFull = true;
-                            return true;
                         }
+                        return true;
+
                     }
                 }
             }

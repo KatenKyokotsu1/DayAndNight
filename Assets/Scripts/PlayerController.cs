@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -35,8 +36,8 @@ public class PlayerController : MonoBehaviour
     public bool frontHead, backHead;
 
     [Header("TakeGun")]
-    public GameObject Gun;
-    public SCinventory inventory;
+    public SCinventory inventory; 
+    private Item itemNearby;
 
     void Start()
     {
@@ -54,6 +55,37 @@ public class PlayerController : MonoBehaviour
         Jump();
         MouseController();
         Crouch();
+    }
+    private void Update()
+    {
+        if (itemNearby != null && Input.GetKeyDown(KeyCode.E))
+        {
+            if (inventory.AddItem(itemNearby.item))
+            {
+                Destroy(itemNearby.gameObject);
+                itemNearby = null;
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Gun"))
+        {
+            Item item = other.GetComponent<Item>();
+            if (item != null && item.item != null)
+            {
+                itemNearby = item;
+                Debug.Log("Silaha yaklaþýldý. E'ye basarak alýnabilir.");
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Gun"))
+        {
+            itemNearby = null;
+        }
     }
 
 
@@ -170,16 +202,17 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region TakeGun
-    void TakeGun()
+   /* void TakeGun()
     {
         float Dis = Vector3.Distance(this.gameObject.transform.position, Gun.transform.position);
         if(Dis<=1 && Input.GetKey(KeyCode.E))
         {
+
             if (inventory.AddItem(Gun.GetComponent<Item>().item))
             {
                 Destroy(Gun);
             }
         }
-    }
+    }*/
     #endregion
 }
