@@ -7,11 +7,12 @@ using UnityEngine;
 
 public class SCinventory : ScriptableObject
 {
-    public List<Slot> inventory = new List<Slot>();
+    public List<Slot> inventorySlot = new List<Slot>();
+    
     int stackLimit = 4;
     public bool AddItem(SCitem item)
     {
-        foreach (Slot slot in inventory)
+        foreach (Slot slot in inventorySlot)
         {
             if (slot.item == item)
             {

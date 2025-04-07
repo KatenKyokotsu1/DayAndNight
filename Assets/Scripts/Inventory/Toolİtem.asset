@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Gun
   itemDescription: gun
   canStackable: 0
-  itemIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  itemIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   itemPrefab: {fileID: 5786097810451525583, guid: 260ff1508afea5241b6511d8fbe92201, type: 3}
   damage: 50

@@ -39,12 +39,14 @@ public class PlayerController : MonoBehaviour
     public SCinventory inventory; 
     private Item itemNearby;
 
+
     void Start()
-    {
+    {      
+
         characterController = GetComponent<CharacterController>();
         normalHeight = characterController.height;
         currentSpeed = walkSpeed;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         
     }
 
@@ -56,38 +58,6 @@ public class PlayerController : MonoBehaviour
         MouseController();
         Crouch();
     }
-    private void Update()
-    {
-        if (itemNearby != null && Input.GetKeyDown(KeyCode.E))
-        {
-            if (inventory.AddItem(itemNearby.item))
-            {
-                Destroy(itemNearby.gameObject);
-                itemNearby = null;
-            }
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Gun"))
-        {
-            Item item = other.GetComponent<Item>();
-            if (item != null && item.item != null)
-            {
-                itemNearby = item;
-                Debug.Log("Silaha yaklaþýldý. E'ye basarak alýnabilir.");
-            }
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Gun"))
-        {
-            itemNearby = null;
-        }
-    }
-
 
 
     #region Movement
