@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("MouseControl")]
 
-
     public Transform camPos;
     public float mouseSens = 1f;
     public int maxRotate = 80;
@@ -35,8 +34,10 @@ public class PlayerController : MonoBehaviour
     public Transform front, back;
     public bool frontHead, backHead;
 
-    [Header("TakeGun")]
-    public SCinventory inventory; 
+    [Header("Inventory")]    
+    bool isOpen;
+    public GameObject playerInventory;
+    public SCinventory inventory;
     private Item itemNearby;
 
 
@@ -46,8 +47,9 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         normalHeight = characterController.height;
         currentSpeed = walkSpeed;
+        playerInventory.SetActive(false);
         //Cursor.lockState = CursorLockMode.Locked;
-        
+
     }
 
     void FixedUpdate()
@@ -57,6 +59,24 @@ public class PlayerController : MonoBehaviour
         Jump();
         MouseController();
         Crouch();
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            if(!isOpen)
+            {
+                playerInventory.SetActive(true);
+                isOpen = true;
+
+            }
+            else if (isOpen)
+            {
+                playerInventory.SetActive(false);
+                isOpen = false;
+            }
+        }
     }
 
 

@@ -10,6 +10,23 @@ public class SCinventory : ScriptableObject
     public List<Slot> inventorySlot = new List<Slot>();
     
     int stackLimit = 4;
+    public void DeleteItem(int index)
+    {
+        inventorySlot[index].isFull = false;
+        inventorySlot[index].itemCount = 0;
+        inventorySlot[index].item = null;
+    }
+
+    public void DropItem(int index , Vector3 position)
+    {
+        for (int i = 0; i < inventorySlot[index].itemCount; i++)
+        {
+            GameObject tempItem = Instantiate(inventorySlot[index].item.itemPrefab);
+            tempItem.transform.position = position + new Vector3(i,0,0);
+        }
+        
+        DeleteItem(index);
+    }
     public bool AddItem(SCitem item)
     {
         foreach (Slot slot in inventorySlot)

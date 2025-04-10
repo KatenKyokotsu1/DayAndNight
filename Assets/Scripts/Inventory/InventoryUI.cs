@@ -5,11 +5,12 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
 {
     public List<SlotUI> slots = new List<SlotUI>();
-    Inventory userInventory;
+    public Inventory userInventory;
 
     private void Start()
     {
         userInventory =GetComponent<Inventory>();
+        UpdateUI();
     }
     public void UpdateUI()
     {

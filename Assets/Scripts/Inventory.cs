@@ -12,12 +12,34 @@ public class Inventory : MonoBehaviour
     int temp›ndex;
     Slot tempSlot;
 
+   
     private void Start()
     {
         InventoryUI = gameObject.GetComponent<InventoryUI>();
         InventoryUI.UpdateUI();
-    }
 
+    }
+    
+    public void DeleteItem()
+    {
+        if (isSwapping)
+        {
+            inventory.DeleteItem(temp›ndex);
+            isSwapping = false;
+            InventoryUI.UpdateUI();
+
+        }
+    }
+    public void DropItem()
+    {
+        if (isSwapping)
+        {
+            inventory.DropItem(temp›ndex, this.transform.position+Vector3.forward*2);
+            isSwapping = false;
+            InventoryUI.UpdateUI();
+
+        }
+    } 
     public void SwapInventory(int index)
     {
         if(isSwapping == false)
