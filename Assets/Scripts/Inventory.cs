@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
     public SCinventory inventory; 
     InventoryUI InventoryUI;
+    public PlayerActions playerAction;
 
     bool isSwapping;
     int temp›ndex;
@@ -16,7 +17,17 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         InventoryUI = gameObject.GetComponent<InventoryUI>();
+        playerAction = gameObject.GetComponent<PlayerActions>();
         InventoryUI.UpdateUI();
+
+    }
+    public void CurrentItem(int index)
+    {
+        if (inventory.inventorySlot[index].item)
+        {
+            playerAction.SetItem(inventory.inventorySlot[index].item.itemPrefab);
+
+        }
 
     }
     
