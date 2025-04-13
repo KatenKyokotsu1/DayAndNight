@@ -13,21 +13,21 @@ public class Inventory : MonoBehaviour
     int temp›ndex;
     Slot tempSlot;
 
+    bool isGun;
    
     private void Start()
     {
         InventoryUI = gameObject.GetComponent<InventoryUI>();
         playerAction = gameObject.GetComponent<PlayerActions>();
         InventoryUI.UpdateUI();
-
+        
     }
     public void CurrentItem(int index)
-    {
-        if (inventory.inventorySlot[index].item)
-        {
-            playerAction.SetItem(inventory.inventorySlot[index].item.itemPrefab);
-
-        }
+    {  
+            if (inventory.inventorySlot[index].item)
+            {
+                playerAction.SetItem(inventory.inventorySlot[index].item.itemPrefab);
+            }     
 
     }
     
@@ -82,5 +82,15 @@ public class Inventory : MonoBehaviour
 
             }
         }
+        if (other.gameObject.tag == "item")
+        {
+            if (inventory.AddItem(other.gameObject.GetComponent<Item>().item))
+            {
+                Destroy(other.gameObject);
+                InventoryUI.UpdateUI();
+
+            }
+        }
+
     }
 }

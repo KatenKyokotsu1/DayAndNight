@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gun
+  - item
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Gun
   - Water
   - UI
   - 

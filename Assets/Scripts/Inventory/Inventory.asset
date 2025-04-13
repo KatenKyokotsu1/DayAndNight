@@ -13,51 +13,51 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   inventorySlot:
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
-  - isFull: 1
-    itemCount: 1
-    item: {fileID: 11400000, guid: d8186320cd794e548be8df62d3b9567e, type: 2}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
+  - isFull: 0
+    itemCount: 0
+    item: {fileID: 0}
   - isFull: 0
     itemCount: 0
     item: {fileID: 0}
