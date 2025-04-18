@@ -228,8 +228,8 @@ MonoBehaviour:
   bullet: {fileID: 5341742223406746680, guid: 9c3cddd6060b7cc4eadfb9cefcf6e7db, type: 3}
   bulletTransform: {fileID: 2856864675662796311}
   bulletForce: 10
-  muzzle: {fileID: 1511211437547358421, guid: 16d3b8d682172594c9e4b802befeedb5, type: 3}
-  smoke: {fileID: 8654406616344453109, guid: 4d056278b72494e4e8de7d538b402599, type: 3}
+  muzzle: {fileID: 6285088701183821622, guid: 16d3b8d682172594c9e4b802befeedb5, type: 3}
+  smoke: {fileID: 5734951068357400559, guid: 4d056278b72494e4e8de7d538b402599, type: 3}
 --- !u!1 &5836183803064680627
 GameObject:
   m_ObjectHideFlags: 0

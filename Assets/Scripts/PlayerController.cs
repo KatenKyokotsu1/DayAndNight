@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         normalHeight = characterController.height;
         currentSpeed = walkSpeed;
         playerInventory.SetActive(false);
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
@@ -68,12 +68,15 @@ public class PlayerController : MonoBehaviour
             if(!isOpen)
             {
                 playerInventory.SetActive(true);
+                Cursor.lockState= CursorLockMode.None;
                 isOpen = true;
 
             }
             else if (isOpen)
             {
                 playerInventory.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
+
                 isOpen = false;
             }
         }
