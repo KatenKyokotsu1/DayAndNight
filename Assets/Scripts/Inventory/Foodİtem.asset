@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Apple
   itemDescription: apple
   canStackable: 1
-  itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  itemIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   itemPrefab: {fileID: 8336193119923414318, guid: 6d82e6c210b7ff548bd144579121532b, type: 3}
   energy: 50

@@ -14,6 +14,8 @@ public class WeatherManager : MonoBehaviour
 
     [Header("UI System")]
     public TextMeshProUGUI weatherText;
+    public Slider weatherSlider;
+    public Image fillImage;
 
     void Start()
     {
@@ -23,6 +25,9 @@ public class WeatherManager : MonoBehaviour
     {
         weatherText.text = temperatureVariable.ToString();
         weatherText.color = temperatureVariable<0 ? Color.Lerp(weatherText.color,Color.blue,.1f) : Color.Lerp(weatherText.color, Color.red, .1f);
+
+        weatherSlider.value = temperatureVariable;
+        fillImage.color = temperatureVariable < 0 ? Color.blue : Color.red;
     }
 
     public void UpdateTemperatuare(float timePercent)
