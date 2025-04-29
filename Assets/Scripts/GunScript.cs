@@ -8,15 +8,13 @@ public class GunScript : MonoBehaviour
     public Transform bulletTransform;
     public float bulletForce;
 
-    public GameObject muzzle, smoke;
-
     public void Fire()
     {       
             Rigidbody rb = Instantiate(bullet, bulletTransform.position, bulletTransform.rotation).GetComponent<Rigidbody>();                                   
             Vector3 shootingDirection = -bulletTransform.right;
             rb.AddForce(shootingDirection * bulletForce, ForceMode.Impulse);
-            Instantiate(muzzle, bulletTransform);
-            Instantiate(smoke, bulletTransform);
+            
+            
     }
 
 

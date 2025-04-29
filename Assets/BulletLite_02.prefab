@@ -179,6 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2fbdccffd6b944b8228d478b8e3af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muzzle: {fileID: 6285088701183821622, guid: 16d3b8d682172594c9e4b802befeedb5, type: 3}
+  smoke: {fileID: 5734951068357400559, guid: 4d056278b72494e4e8de7d538b402599, type: 3}
+  effeckTransform: {fileID: 0}
 --- !u!1 &8087445199789049519
 GameObject:
   m_ObjectHideFlags: 0

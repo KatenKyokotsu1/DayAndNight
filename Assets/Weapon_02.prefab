@@ -169,6 +169,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2856864675662796311}
   - {fileID: 6861224161297276134}
   - {fileID: 6602789456199049287}
   - {fileID: 4113625917885360746}
@@ -176,7 +177,6 @@ Transform:
   - {fileID: 1000707409690022306}
   - {fileID: 5708246081686148530}
   - {fileID: 7576839964966942220}
-  - {fileID: 2856864675662796311}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4583089758167062895
@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5341742223406746680, guid: 9c3cddd6060b7cc4eadfb9cefcf6e7db, type: 3}
   bulletTransform: {fileID: 2856864675662796311}
+  effeckTransform: {fileID: 0}
   bulletForce: 10
   muzzle: {fileID: 6285088701183821622, guid: 16d3b8d682172594c9e4b802befeedb5, type: 3}
   smoke: {fileID: 5734951068357400559, guid: 4d056278b72494e4e8de7d538b402599, type: 3}
