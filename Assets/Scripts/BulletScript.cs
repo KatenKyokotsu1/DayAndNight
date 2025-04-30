@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public GameObject muzzle, smoke;
+    public TreeScript tree;
     void Start()
     {
         Destroy(gameObject,2);
@@ -17,6 +18,12 @@ public class BulletScript : MonoBehaviour
         if(other !=null)
         {
             Destroy(this.gameObject);
+        }
+        
+        if(other.gameObject.tag == "Tree")
+        {
+            tree = other.GetComponent<TreeScript>();
+            tree.TakeDamage(10);
         }
     }
 }

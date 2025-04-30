@@ -93,9 +93,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2807449429036539767}
   - component: {fileID: 5942433330446073732}
+  - component: {fileID: 5214268896869786197}
+  - component: {fileID: -256965102448703983}
   m_Layer: 0
   m_Name: Tree_04
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +142,42 @@ LODGroup:
     renderers:
     - renderer: {fileID: 3461422629048897427}
   m_Enabled: 1
+--- !u!114 &5214268896869786197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807449429036958551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa77659b7831bc42b740d775984f0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brokenTree: {fileID: 6659497254892068011, guid: d5119d3781484314fba00186c9574ead, type: 3}
+  health: 50
+--- !u!64 &-256965102448703983
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807449429036958551}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &7897144593525785336
 GameObject:
   m_ObjectHideFlags: 0
