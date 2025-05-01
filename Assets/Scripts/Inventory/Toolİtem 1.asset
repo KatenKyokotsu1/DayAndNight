@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 500663b489dea474ab96e3eed3a66d5b, type: 3}
-  m_Name: "Tool\u0130tem"
+  m_Name: "Tool\u0130tem 1"
   m_EditorClassIdentifier: 
-  itemName: Gun
-  itemDescription: gun
-  canStackable: 0
-  itemIcon: {fileID: 21300000, guid: b184fdaff13bbf148a9ff637d9474d76, type: 3}
-  itemPrefab: {fileID: 5786097810451525583, guid: 260ff1508afea5241b6511d8fbe92201, type: 3}
+  itemName: Branch
+  itemDescription: wood
+  canStackable: 1
+  itemIcon: {fileID: 21300000, guid: b62bae8f3a04a8b43bd006d47ad19232, type: 3}
+  itemPrefab: {fileID: 1493958779012120596, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
   damage: 50

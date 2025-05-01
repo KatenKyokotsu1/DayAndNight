@@ -9,7 +9,7 @@ public class InventoryUI : MonoBehaviour
 
     private void Start()
     {
-        userInventory =GetComponent<Inventory>();
+        userInventory = GetComponent<Inventory>();
         UpdateUI();
     }
     public void UpdateUI()

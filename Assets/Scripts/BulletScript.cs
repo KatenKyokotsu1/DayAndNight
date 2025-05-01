@@ -20,10 +20,6 @@ public class BulletScript : MonoBehaviour
             Destroy(this.gameObject);
         }
         
-        if(other.gameObject.tag == "Tree")
-        {
-            tree = other.GetComponent<TreeScript>();
-            tree.TakeDamage(10);
-        }
+       
     }
 }

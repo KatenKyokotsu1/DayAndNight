@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Gun
   - item
+  - Tree
+  - Knife
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - Gun
   - Water
   - UI
-  - 
+  - interactibleTree
   - 
   - 
   - 

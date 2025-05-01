@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Services.Analytics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public float mouseSens = 1f;
     public int maxRotate = 80;
     float xRotation = 0f;
+    public Image cross;
 
     [Header("Crouch")]
     public float normalHeight;
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerInventory.SetActive(true);
                 Cursor.lockState= CursorLockMode.None;
+                cross.enabled = false;
                 isOpen = true;
 
             }
@@ -76,6 +79,7 @@ public class PlayerController : MonoBehaviour
             {
                 playerInventory.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
+                cross.enabled = true;
 
                 isOpen = false;
             }
@@ -194,18 +198,5 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-    #region TakeGun
-   /* void TakeGun()
-    {
-        float Dis = Vector3.Distance(this.gameObject.transform.position, Gun.transform.position);
-        if(Dis<=1 && Input.GetKey(KeyCode.E))
-        {
-
-            if (inventory.AddItem(Gun.GetComponent<Item>().item))
-            {
-                Destroy(Gun);
-            }
-        }
-    }*/
-    #endregion
+   
 }
