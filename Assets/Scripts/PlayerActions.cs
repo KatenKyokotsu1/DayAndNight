@@ -49,21 +49,26 @@ public class PlayerActions : MonoBehaviour
         
         if (currentItem != null && currentItem.CompareTag("Knife") && Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit;
             Vector3 origin = interactiblePos.position;
             Vector3 direction = interactiblePos.forward;
+            Collider[] hits = Physics.OverlapSphere(origin, 1, interactibleTree);
 
-            if (Physics.SphereCast(origin, 1, direction, out hit, 1, interactibleTree))
+            foreach (Collider hit in hits)
             {
-                if (hit.collider.CompareTag("Tree"))
+                if (hit.CompareTag("Tree"))
                 {
-                    TreeScript tree = hit.collider.GetComponent<TreeScript>();
+                    TreeScript tree = hit.GetComponent<TreeScript>();
                     if (tree != null)
                     {
                         tree.TakeDamage(10);
+                        break;
                     }
                 }
             }
+
+
+
+
 
         }
     }
