@@ -10,6 +10,8 @@ public class PlayerActions : MonoBehaviour
     GameObject temp;
     public GunScript gun;
     public float delay;
+    public InventoryUI inventoryUI;
+    public List<GameObject> hotbarItems = new List<GameObject>();
 
     public LayerMask interactibleTree;
     public void SetItem(GameObject item)
@@ -66,10 +68,17 @@ public class PlayerActions : MonoBehaviour
                 }
             }
 
-
-
-
-
+        }
+        for (int i = 0; i < 6; i++)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1 + i))
+            {
+                hotbarItems = inventoryUI.GetHotbarItemPrefabs(); 
+                if (hotbarItems[i] != null)
+                {
+                    SetItem(hotbarItems[i]);
+                }
+            }
         }
     }
 

@@ -13,7 +13,6 @@ public class Inventory : MonoBehaviour
     int temp›ndex;
     Slot tempSlot;
 
-    bool isGun;
    
     private void Start()
     {

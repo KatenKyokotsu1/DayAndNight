@@ -7,6 +7,7 @@ public class InventoryUI : MonoBehaviour
     public List<SlotUI> slots = new List<SlotUI>();
     public Inventory userInventory;
 
+
     private void Start()
     {
         userInventory = GetComponent<Inventory>();
@@ -38,5 +39,24 @@ public class InventoryUI : MonoBehaviour
 
             }
         }
+    }
+    public List<GameObject> GetHotbarItemPrefabs()
+    {
+        List<GameObject> hotbarItems = new List<GameObject>();
+
+        for (int i = 0; i < 6; i++)
+        {
+            var slot = userInventory.inventory.inventorySlot[i];
+            if (slot.itemCount > 0 && slot.item.itemPrefab != null)
+            {
+                hotbarItems.Add(slot.item.itemPrefab);
+            }
+            else
+            {
+                hotbarItems.Add(null); // boþ slotlar için null koy
+            }
+        }
+
+        return hotbarItems;
     }
 }
