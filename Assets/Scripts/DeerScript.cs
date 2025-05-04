@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-
 public class DeerScript : MonoBehaviour
 {
     public GameObject player;
@@ -11,9 +10,11 @@ public class DeerScript : MonoBehaviour
     public bool isRange;
     public float moveSpeed;
     public int currentHealth;
+    Animator animator;
     void Start()
     {
         player = GameObject.Find("Player");
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -24,8 +25,13 @@ public class DeerScript : MonoBehaviour
         {
             DeerEscape();
         }
+        else
+        {
+            animator.SetBool("isRunning", false);
 
-        
+        }
+
+
     }
 
     void DeerEscape()
@@ -33,7 +39,7 @@ public class DeerScript : MonoBehaviour
         Vector3 direction = (transform.position - player.transform.position).normalized;
         Vector3 move = direction * moveSpeed * Time.deltaTime;
         transform.position += move;
-
+        animator.SetBool("isRunning",true);
         if (move != Vector3.zero)
         {
             Quaternion lookRotation = Quaternion.LookRotation(direction);
@@ -52,7 +58,7 @@ public class DeerScript : MonoBehaviour
         currentHealth -= dmg;
         if(currentHealth <= 0)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,2);
         }
     }
 }
